@@ -68,7 +68,7 @@ function sumFormat($value)
 
     elseif ($value >= 1000) {
 
-        number_format($value, 0, '.', ' ');
+        $value = number_format($value, 0, '.', ' ');
         return $value . '<b class=\"rub\">₽</b>';
     }
 
