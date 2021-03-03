@@ -87,4 +87,14 @@ function include_template($name, $data) {
     $result = ob_get_clean();
     return $result;
 }
+
+function time_counter() {
+
+    $time_left = strtotime("tomorrow") - strtotime("now");
+    $hours = floor($time_left/3600);
+    $minutes = floor(($time_left%3600)/60);
+    $time_left = sprintf("%02d:%02d",$hours,$minutes);
+
+    return $time_left;
+}
 ?>

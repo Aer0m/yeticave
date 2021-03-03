@@ -30,7 +30,7 @@
                             <span class="lot__cost"><?= sumFormat($lot['price']) ?></span>
                         </div>
                         <div class="lot__timer timer">
-                            12:23
+                            <?=time_counter();?>
                         </div>
                     </div>
                 </div>
