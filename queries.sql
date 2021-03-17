@@ -5,8 +5,8 @@ INSERT INTO categories set categ_id = "4", categ_name ="Одежда";
 INSERT INTO categories set categ_id = "5", categ_name ="Инструменты";
 INSERT INTO categories set categ_id = "6", categ_name ="Разное";
 
-INSERT INTO users set user_id = "67458", user_name = "Александр", user_email = "shdkfjh123@gamil.com", user_password = "Sjdflkj36743", user_signup_date = "04.03.2021", user_image = "img/user.png", user_contact = "они точно есть";
-INSERT INTO users set user_id = "78905", user_name = "Елена", user_email = "Sergey12@mail.ru", user_password = "Aaasdasd6845", user_signup_date = "04.03.2021", user_image = "img/user.png", user_contact = "WOLF FROM PODOLSK STREET";
+INSERT INTO users set user_id = "67458", user_name = "Александр", user_email = "shdkfjh123@gamil.com", user_password = "Sjdflkj36743", user_signup_date = "17.03.2021", user_image = "img/user.png", user_contact = "qweqweasd";
+INSERT INTO users set user_id = "78905", user_name = "Елена", user_email = "Sergey12@mail.ru", user_password = "Aaasdasd6845", user_signup_date = "17.03.2021", user_image = "img/user.png", user_contact = "qwerty";
 
 INSERT INTO lots set lot_name = "2014 Rossignol District Snowboard", lot_descr_text = "текст номер 1", lot_image = "img/lot-1.jpg", lot_cr_date = "03.03.2021", lot_comp_date = "04.03.2021", lot_start_price = "10999";
 INSERT INTO lots set lot_name = "DC Ply Mens 2016/2017 Snowboard", lot_descr_text = "текст номер 2", lot_image = "img/lot-2.jpg", lot_cr_date = "03.03.2021", lot_comp_date = "04.03.2021", lot_start_price = "159999";

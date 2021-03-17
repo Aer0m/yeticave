@@ -1,8 +1,10 @@
 <?php
 require_once ('functions.php');
-require ('data.php');
+require ('templates/data.php');
 
 $lotID = intval($_GET['id']);
+
+echo $lotID;
 
 $currentLot = null;
 if (isset($_Get['id'])) {
