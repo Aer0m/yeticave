@@ -3,9 +3,10 @@
 $link = mysqli_connect('127.0.0.1', 'root', '','schema');
 mysqli_set_charset($link, utf8);
 
-$sql = 'select * from categories';
+$sql = 'SELECT*FROM categories';
+$sql2='SELECT*FROM lots';
 $result = mysqli_query($link, $sql);
-
+$result2=mysqli_query($link,$sql2);
 if($result)
     echo mysqli_error($link);
 
