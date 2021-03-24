@@ -68,6 +68,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                     'categories' => $categories,
                     'goods' => $goods,
                     'time_left' => $time_counter]);
+
+            $link =  mysqli_connect('localhost', 'asdasd', 'sdghSDkj34', 'yeticave');
+            mysqli_set_charset($link, 'utf8');
+            $sql = "SELECT category_id FROM Categories WHERE name = '{$lot['category']}'";
+            $result = mysqli_query($link, $sql);
+            $lot['category'] = mysqli_fetch_assoc($result)['category_id'];
+
+            $sql = "INSERT INTO lots(lot_user_id, lot_winner_id, lot_name, lot_categ_id, lot_descr_text, lot_image, lot_cr_date,  lot_comp_date, lot_start_price, lot_step)
+
+        VALUE ('12345', '12345','{$lot['name']}', '{$lot['category']}', '{$lot['description']}', '{$lot['image']}', '24.03.2021',  '{$lot['timer']}',  '{$lot['start_price']}', '{$lot['rate']}')";
+            $result = mysqli_query($con, $sql);
+
+            if(!$result)
+                echo mysqli_error($con);
+
         }
 
     }
@@ -75,21 +90,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 else{
         $page_content = include_template('add.php',
             [
-                'categories' => $categories,
-                'goods' => $goods,
-                'time_left' => $time_counter]);
+                'errors' => $errors ?? []
+            ]);
     }
 
-    print_r($errors);
-    print_r($lot);
-
     $layout_content = include_template('layout.php',
-        [   'page_title' => 'Главная страница',
-            'is_auth' => $is_auth,
-            'user_name'=> $user_name,
-            'user_avatar'=>$user_avatar,
-            'page_content'=>$page_content,
-            'categories' =>$categories
+        [  'content' => $page_content,
+            'categories' => $categories
         ]);
 
     print($layout_content);
