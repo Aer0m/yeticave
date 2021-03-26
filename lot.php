@@ -1,6 +1,6 @@
 <?php
 require_once ('functions.php');
-require ('templates/data.php');
+require ('data.php');
 
 $lotID = intval($_GET['id']);
 

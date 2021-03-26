@@ -1,7 +1,7 @@
 <?php
 
 require_once('functions.php');
-require ('templates/data.php');
+require ('data.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $required_fields = ['lot-name', 'category', 'message', 'lot-rate', 'lot-step', 'lot-date'];
