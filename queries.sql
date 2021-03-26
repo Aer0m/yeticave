@@ -19,5 +19,5 @@ INSERT INTO rate set rate_id = "1", lot_id="1", rate_date = "04.03.2021", rate_p
 INSERT INTO rate set rate_id = "2", lot_id="1", rate_date = "04.03.2021", rate_price = "19000";
 
 SELECT * FROM lots WHERE lot_cr_date > SUBDATE(now(),0);
-UPDATE lots SET lots_name = "update lots name" WHERE lot_id="1";
+UPDATE lots SET lot_name = "update lots name" WHERE lot_id="1";
 SELECT lot_id FROM rate WHERE rate_date > SUBDATE(now(),0);
