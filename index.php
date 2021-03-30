@@ -2,6 +2,8 @@
 require_once('functions.php');
 require_once('data.php');
 
+session_start();
+
 $page_content = include_template('index.php',
     ['categories' => $categories,
         'goods' => $goods]);
